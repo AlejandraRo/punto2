@@ -1,0 +1,14 @@
+<app-navbar-login></app-navbar-login>
+
+  <div class="container text-center">
+    <h1>Información del usuario</h1>
+    <div *ngIf="auth.user$ | async as user" class="justify-content-center" >
+      <img [src]="user.picture" class="img-thumbnail float-center">
+      <p>{{user.given_name}}</p>
+      <p>{{user.family_name}}</p>
+      <p>{{user.nickname}}</p>
+      <p>{{user.email}}</p>
+      <p >{{user | json}}</p>
+    </div>
+   
+  </div>
